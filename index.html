@@ -1,0 +1,2980 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa del Sol — Retiros, encuentros y descanso en Puerto Madryn | Patagonia</title>
+  <meta name="description" content="Casa del Sol es un espacio de encuentro, retiro, descanso y creación en un entorno de campo en Puerto Madryn. Retiros, residencias, spa exclusivo, piyamadas, celebraciones y alojamiento." />
+  <meta name="keywords" content="retiros Puerto Madryn, residencias artísticas Patagonia, spa exclusivo Puerto Madryn, piyamadas, celebraciones Puerto Madryn, alojamiento de campo Patagonia, encuentros grupales" />
+  <link rel="canonical" href="https://www.casadelsolmadryn.com.ar/" />
+  <meta property="og:title" content="Casa del Sol — Retiros, encuentros y descanso en Puerto Madryn" />
+  <meta property="og:description" content="Un espacio para encontrarse, retirarse, descansar y crear, en un entorno de campo en Puerto Madryn. Retiros, residencias, spa exclusivo y más." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.casadelsolmadryn.com.ar/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       DESIGN SYSTEM
+    ============================================= */
+    :root {
+      --verde-profundo: #02725b;
+      --verde-medio: #2d7969;
+      --verde-sage: #27b89a;
+      --verde-claro: #a7ffff;
+      --crema: #fafffe;
+      --crema-oscuro: #e9f4f0;
+      --dorado: #b372cd;
+      --dorado-claro: #c48fda;
+      --marron: #1e540f;
+      --marron-suave: #2d7969;
+      --texto: #143f37;
+      --texto-suave: #5f7b74;
+      --blanco: #FFFFFF;
+      --negro: #141414;
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Jost', sans-serif;
+
+      --radius: 4px;
+      --radius-lg: 12px;
+      --shadow: 0 8px 40px rgba(27, 58, 47, 0.12);
+      --shadow-hover: 0 20px 60px rgba(27, 58, 47, 0.22);
+      --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* =============================================
+       RESET & BASE
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--crema);
+      color: var(--texto);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* =============================================
+       TYPOGRAPHY
+    ============================================= */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--verde-profundo);
+    }
+
+    .eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .display-xl { font-size: clamp(3.2rem, 7vw, 6.5rem); font-weight: 300; line-height: 1.05; }
+    .display-lg { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 300; }
+    .display-md { font-size: clamp(1.9rem, 3.5vw, 2.8rem); }
+    .display-sm { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+
+    .lead {
+      font-family: var(--font-sans);
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--texto-suave);
+    }
+
+    /* =============================================
+       LAYOUT
+    ============================================= */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .container--wide { max-width: 1400px; }
+    .container--narrow { max-width: 800px; }
+
+    .section { padding: clamp(4rem, 8vw, 9rem) 0; }
+    .section--dark { background-color: var(--verde-profundo); color: var(--crema); }
+    .section--cream { background-color: var(--crema); }
+    .section--warm { background-color: var(--crema-oscuro); }
+
+    /* =============================================
+       BUTTONS
+    ============================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 1rem 2.2rem;
+      border-radius: 100px;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn--primary {
+      background: var(--dorado);
+      color: var(--blanco);
+    }
+    .btn--primary:hover {
+      background: var(--dorado-claro);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(196, 144, 74, 0.35);
+    }
+
+    .btn--outline {
+      border: 1.5px solid currentColor;
+      color: var(--crema);
+    }
+    .btn--outline:hover {
+      background: rgba(248, 242, 232, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .btn--outline-dark {
+      border: 1.5px solid var(--verde-profundo);
+      color: var(--verde-profundo);
+    }
+    .btn--outline-dark:hover {
+      background: var(--verde-profundo);
+      color: var(--crema);
+      transform: translateY(-2px);
+    }
+
+    .btn--ghost {
+      color: var(--dorado);
+      padding: 0;
+      letter-spacing: 0.1em;
+      position: relative;
+    }
+    .btn--ghost::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--dorado);
+      transition: width 0.3s ease;
+    }
+    .btn--ghost:hover::after { width: 100%; }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: var(--blanco);
+      padding: 1rem 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe5c;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+    }
+
+    /* =============================================
+       DECORATIVE ELEMENTS
+    ============================================= */
+    .gold-line {
+      width: 50px;
+      height: 1.5px;
+      background: var(--dorado);
+      display: block;
+    }
+
+    .section-header {
+      margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+    }
+
+    .section-header--center {
+      text-align: center;
+    }
+
+    .section-header--center .gold-line {
+      margin: 1.2rem auto 0;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .ornament .gold-line { width: 30px; }
+    .ornament-text {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--dorado);
+      font-size: 1rem;
+    }
+
+    /* =============================================
+       HEADER / NAV
+    ============================================= */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: all 0.5s ease;
+      padding: 1.5rem 0;
+    }
+
+    #header.scrolled {
+      background: rgba(248, 242, 232, 0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 1rem 0;
+      box-shadow: 0 2px 30px rgba(27, 58, 47, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .nav__logo img {
+      height: 54px;
+      width: auto;
+      transition: var(--transition);
+      /* logo blanco sobre el hero oscuro */
+      filter: brightness(0) invert(1);
+    }
+    #header.scrolled .nav__logo img {
+      height: 46px;
+      /* logo turquesa (color natural) sobre fondo claro */
+      filter: none;
+    }
+
+    .nav__logo-text {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--crema);
+      transition: color 0.5s ease;
+      letter-spacing: 0.04em;
+    }
+
+    #header.scrolled .nav__logo-text { color: var(--verde-profundo); }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    .nav__link {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(248, 242, 232, 0.9);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav__link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--dorado);
+      transition: width 0.3s ease;
+    }
+
+    .nav__link:hover::after { width: 100%; }
+    .nav__link:hover { color: var(--crema); }
+
+    #header.scrolled .nav__link { color: var(--texto-suave); }
+    #header.scrolled .nav__link:hover { color: var(--verde-profundo); }
+
+    .nav__cta {
+      background: var(--dorado);
+      color: var(--blanco) !important;
+      padding: 0.7rem 1.6rem;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
+    .nav__cta:hover {
+      background: var(--dorado-claro);
+      transform: translateY(-1px);
+    }
+    .nav__cta::after { display: none !important; }
+
+    /* Hamburger */
+    .nav__burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav__burger span {
+      width: 26px;
+      height: 1.5px;
+      background: var(--crema);
+      transition: var(--transition);
+      display: block;
+    }
+    #header.scrolled .nav__burger span { background: var(--verde-profundo); }
+
+    .nav__burger.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .nav__burger.active span:nth-child(2) { opacity: 0; }
+    .nav__burger.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+    /* Mobile menu */
+    .nav__mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--verde-profundo);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+    .nav__mobile.active {
+      display: flex;
+      opacity: 1;
+      pointer-events: all;
+    }
+    .nav__mobile .nav__link {
+      font-size: 1.1rem;
+      letter-spacing: 0.18em;
+      color: rgba(248, 242, 232, 0.85);
+    }
+    .nav__mobile .nav__link:hover { color: var(--crema); }
+    .nav__mobile .nav__cta {
+      margin-top: 0.5rem;
+      padding: 0.9rem 2.2rem;
+    }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 620px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero__grain {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background: url('spa.jpg')
+        center center / cover no-repeat;
+      transform: scale(1.05);
+      animation: heroZoom 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroZoom {
+      from { transform: scale(1.05); }
+      to { transform: scale(1.12); }
+    }
+
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(10, 21, 16, 0.82) 0%,
+        rgba(10, 21, 16, 0.65) 55%,
+        rgba(10, 21, 16, 0.30) 100%
+      );
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 3;
+      padding: 100px clamp(1.5rem, 5vw, 4rem) 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.8rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.3s forwards;
+    }
+    .hero__tag-line { width: 40px; height: 1px; background: var(--dorado-claro); }
+    .hero__tag-text {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--dorado-claro);
+      font-family: var(--font-sans);
+      font-weight: 500;
+    }
+
+    .hero__title {
+      color: var(--crema);
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      max-width: 720px;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.5s forwards;
+    }
+
+    .hero__title em {
+      font-style: italic;
+      color: var(--dorado-claro);
+      font-weight: 300;
+    }
+
+    .hero__subtitle {
+      font-family: var(--font-sans);
+      font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(248, 242, 232, 0.78);
+      max-width: 500px;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.7s forwards;
+    }
+
+    .hero__actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.9s forwards;
+    }
+
+    .hero__scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(248, 242, 232, 0.6);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      z-index: 2;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    .hero__scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, rgba(212, 175, 122, 0.7));
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* =============================================
+       ESENCIA / ABOUT
+    ============================================= */
+    #esencia {
+      padding: clamp(4rem, 8vw, 9rem) 0;
+      background: var(--crema);
+      overflow: hidden;
+    }
+
+    .esencia__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: center;
+    }
+
+    .esencia__image-wrap {
+      position: relative;
+    }
+
+    .esencia__image-main {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .esencia__image-accent {
+      position: absolute;
+      bottom: -2.5rem;
+      right: -2.5rem;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      border: 6px solid var(--crema);
+      box-shadow: var(--shadow);
+    }
+
+    .esencia__badges {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      border: 1px solid var(--crema-oscuro);
+      color: var(--texto-suave);
+      background: var(--crema-oscuro);
+    }
+
+    .badge--icon {
+      display: flex;
+      align-items: center;
+      color: var(--verde-medio);
+    }
+
+    .esencia__text h2 { margin-bottom: 1.2rem; }
+    .esencia__text .lead { margin-bottom: 1.5rem; }
+
+    .esencia__detail {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--crema-oscuro);
+    }
+
+    .esencia__stat span {
+      display: block;
+    }
+    .esencia__stat .number {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--verde-profundo);
+      line-height: 1;
+    }
+    .esencia__stat .label {
+      font-size: 0.78rem;
+      color: var(--texto-suave);
+      letter-spacing: 0.06em;
+      margin-top: 0.3rem;
+    }
+
+    /* =============================================
+       ALOJAMIENTO
+    ============================================= */
+    #alojamiento {
+      padding: clamp(4rem, 8vw, 9rem) 0;
+      background: var(--crema-oscuro);
+    }
+
+    .alojamiento__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .aloj-card {
+      background: var(--crema);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .aloj-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+
+    .aloj-card__image {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .aloj-card__image-bg {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s ease;
+    }
+    .aloj-card:hover .aloj-card__image-bg { transform: scale(1.05); }
+
+    .aloj-card__body {
+      padding: 2.2rem;
+    }
+
+    .aloj-card__tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.7rem;
+    }
+
+    .aloj-card h3 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .aloj-card__desc {
+      font-size: 0.92rem;
+      color: var(--texto-suave);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    .aloj-card__amenities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .amenity {
+      font-size: 0.78rem;
+      color: var(--texto-suave);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .amenity::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--verde-sage);
+      flex-shrink: 0;
+    }
+
+    /* =============================================
+       SPA SECTION
+    ============================================= */
+    #spa {
+      position: relative;
+      padding: clamp(5rem, 9vw, 10rem) 0;
+      overflow: hidden;
+    }
+
+    .spa__bg {
+      position: absolute;
+      inset: 0;
+      background: url('deck.jpg')
+        center center / cover no-repeat;
+      transform: translateZ(0);
+    }
+
+    .spa__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(14, 26, 20, 0.88) 0%,
+        rgba(27, 58, 47, 0.82) 100%
+      );
+    }
+
+    .spa__content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .spa__header { color: var(--crema); margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+    .spa__header h2 { color: var(--crema); }
+
+    .spa__features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .spa__feature {
+      background: rgba(248, 242, 232, 0.06);
+      border: 1px solid rgba(248, 242, 232, 0.12);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .spa__feature:hover {
+      background: rgba(248, 242, 232, 0.1);
+      border-color: rgba(212, 175, 122, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .spa__feature-icon {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+      border: 1px solid rgba(248,242,232,0.15);
+      border-radius: 50%;
+      color: var(--dorado-claro);
+      transition: var(--transition);
+    }
+    .spa__feature:hover .spa__feature-icon {
+      border-color: rgba(212,175,122,0.4);
+      background: rgba(196,144,74,0.08);
+    }
+
+    .spa__feature h4 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--crema);
+      margin-bottom: 0.5rem;
+    }
+
+    .spa__feature p {
+      font-size: 0.82rem;
+      color: rgba(248, 242, 232, 0.65);
+      line-height: 1.6;
+    }
+
+    /* Horarios badge */
+    .spa__schedule {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    .schedule-item {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: rgba(248, 242, 232, 0.85);
+      font-size: 0.88rem;
+      font-weight: 300;
+    }
+    .schedule-item strong {
+      color: var(--dorado-claro);
+      font-weight: 500;
+    }
+    .schedule-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--dorado);
+    }
+
+    /* Pricing Cards */
+    .spa__pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .price-card {
+      background: rgba(248, 242, 232, 0.06);
+      border: 1px solid rgba(248, 242, 232, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 2.2rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .price-card:hover {
+      background: rgba(248, 242, 232, 0.1);
+      border-color: rgba(212, 175, 122, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .price-card--featured {
+      background: rgba(196, 144, 74, 0.15);
+      border-color: rgba(196, 144, 74, 0.4);
+    }
+
+    .price-card__badge {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: var(--dorado);
+      color: var(--blanco);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+    }
+
+    .price-card__type {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dorado-claro);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .price-card h4 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--crema);
+      margin-bottom: 1.5rem;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid rgba(248, 242, 232, 0.08);
+    }
+    .price-item:last-child { border-bottom: none; }
+
+    .price-item__name {
+      font-size: 0.88rem;
+      color: rgba(248, 242, 232, 0.8);
+      font-weight: 300;
+    }
+
+    .price-item__detail {
+      font-size: 0.75rem;
+      color: rgba(248, 242, 232, 0.45);
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    .price-item__amount {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--crema);
+      font-weight: 400;
+      white-space: nowrap;
+      margin-left: 1rem;
+    }
+
+    .price-note {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: rgba(248, 242, 232, 0.55);
+      font-style: italic;
+    }
+
+    /* =============================================
+       MASAJES
+    ============================================= */
+    #masajes {
+      padding: clamp(4rem, 8vw, 9rem) 0;
+      background: var(--crema);
+    }
+
+    .masajes__intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+
+    .masajes__image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .masajes__menu {
+      background: var(--verde-profundo);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+    }
+
+    .masajes__menu h3 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--crema);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(248, 242, 232, 0.1);
+    }
+
+    .masaje-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(248, 242, 232, 0.07);
+      gap: 1rem;
+    }
+    .masaje-item:last-child { border-bottom: none; }
+
+    .masaje-item__info h5 {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: rgba(248, 242, 232, 0.9);
+      margin-bottom: 0.2rem;
+    }
+
+    .masaje-item__info span {
+      font-size: 0.75rem;
+      color: rgba(248, 242, 232, 0.45);
+    }
+
+    .masaje-item__price {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--dorado-claro);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .masajes__promo {
+      margin-top: 3rem;
+      background: linear-gradient(135deg, var(--verde-profundo) 0%, var(--verde-medio) 100%);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      border: 1px solid rgba(196, 144, 74, 0.25);
+    }
+
+    .masajes__promo-icon {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .masajes__promo h4 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--crema);
+      margin-bottom: 0.5rem;
+    }
+
+    .masajes__promo p {
+      font-size: 0.88rem;
+      color: rgba(248, 242, 232, 0.7);
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       GALERÍA
+    ============================================= */
+    #galeria {
+      padding: clamp(4rem, 8vw, 9rem) 0;
+      background: var(--crema-oscuro);
+    }
+
+    .galeria__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 260px;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .galeria__item {
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      position: relative;
+      min-height: 0;
+    }
+    .galeria__item--tall { grid-row: span 2; }
+    .galeria__item--wide { grid-column: span 2; }
+
+    .galeria__item img,
+    .galeria__item-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s ease;
+    }
+
+    .galeria__item:hover img,
+    .galeria__item:hover .galeria__item-bg { transform: scale(1.07); }
+
+    .galeria__item-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(14, 26, 20, 0);
+      transition: background 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .galeria__item:hover .galeria__item-overlay {
+      background: rgba(14, 26, 20, 0.25);
+    }
+
+    /* =============================================
+       PATAGONIA / EXPERIENCIAS
+    ============================================= */
+    #patagonia {
+      padding: clamp(4rem, 8vw, 9rem) 0;
+      background: var(--crema);
+    }
+
+    .patagonia__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .patagonia__image {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .experiencia-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .experiencia-item {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+
+    .experiencia-item__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--crema-oscuro);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: var(--transition);
+      color: var(--verde-medio);
+    }
+    .experiencia-item:hover .experiencia-item__icon {
+      background: var(--verde-sage);
+    }
+
+    .experiencia-item h5 {
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--verde-profundo);
+      margin-bottom: 0.25rem;
+    }
+
+    .experiencia-item p {
+      font-size: 0.82rem;
+      color: var(--texto-suave);
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       VALORES (Pet Friendly + Inclusivo)
+    ============================================= */
+    #valores {
+      padding: clamp(3rem, 5vw, 6rem) 0;
+      background: var(--verde-profundo);
+    }
+
+    .valores__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .valor-item {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .valor-item__icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(248,242,232,0.15);
+      border-radius: 50%;
+      color: var(--dorado-claro);
+    }
+
+    .valor-item h4 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--crema);
+      margin-bottom: 0.7rem;
+    }
+
+    .valor-item p {
+      font-size: 0.85rem;
+      color: rgba(248, 242, 232, 0.65);
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       TESTIMONIOS
+    ============================================= */
+    #testimonios {
+      padding: clamp(4rem, 8vw, 9rem) 0;
+      background: var(--crema-oscuro);
+    }
+
+    .testimonios__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .testimonio-card {
+      background: var(--crema);
+      border-radius: var(--radius-lg);
+      padding: 2.2rem;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .testimonio-card::before {
+      content: '\201C';
+      font-family: var(--font-serif);
+      font-size: 6rem;
+      color: var(--crema-oscuro);
+      position: absolute;
+      top: 0.5rem;
+      left: 1.5rem;
+      line-height: 1;
+    }
+
+    .testimonio-card__stars {
+      color: var(--dorado);
+      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.1em;
+    }
+
+    .testimonio-card__text {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--texto);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonio-card__author {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .testimonio-card__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--verde-sage);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--crema);
+    }
+
+    .testimonio-card__name {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--verde-profundo);
+    }
+
+    .testimonio-card__origin {
+      font-size: 0.75rem;
+      color: var(--texto-suave);
+    }
+
+    /* =============================================
+       FAQ
+    ============================================= */
+    #faq {
+      padding: clamp(4rem, 8vw, 9rem) 0;
+      background: var(--crema);
+    }
+
+    .faq__layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .faq__sidebar h2 {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq__sidebar .lead {
+      margin-bottom: 2rem;
+    }
+
+    .faq__list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--crema-oscuro);
+    }
+
+    .faq-item__question {
+      width: 100%;
+      text-align: left;
+      padding: 1.4rem 0;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--verde-profundo);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .faq-item__question:hover { color: var(--dorado); }
+
+    .faq-item__icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+      color: var(--dorado);
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .faq-item.active .faq-item__icon { transform: rotate(45deg); }
+
+    .faq-item__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq-item.active .faq-item__answer {
+      max-height: 300px;
+    }
+
+    .faq-item__answer p {
+      font-size: 0.9rem;
+      color: var(--texto-suave);
+      line-height: 1.75;
+      padding-bottom: 1.4rem;
+    }
+
+    /* =============================================
+       UBICACIÓN
+    ============================================= */
+    #ubicacion {
+      padding: clamp(4rem, 8vw, 9rem) 0;
+      background: var(--crema-oscuro);
+    }
+
+    .ubicacion__grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 3.5rem;
+    }
+
+    .ubicacion__info h3 {
+      font-size: 1.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-block {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .info-block__icon {
+      width: 44px;
+      height: 44px;
+      background: var(--crema);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 10px rgba(27,58,47,0.08);
+      color: var(--verde-medio);
+    }
+
+    .info-block__text .label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .info-block__text .value {
+      font-size: 0.92rem;
+      color: var(--texto);
+      line-height: 1.5;
+    }
+
+    .ubicacion__map {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .ubicacion__map iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      display: block;
+    }
+
+    /* =============================================
+       RESERVAR / CONTACTO
+    ============================================= */
+    #contacto {
+      padding: clamp(4rem, 8vw, 9rem) 0;
+      background: var(--verde-profundo);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contacto::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(196, 144, 74, 0.06);
+      pointer-events: none;
+    }
+
+    .contacto__grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contacto__text h2 { color: var(--crema); margin-bottom: 1.2rem; }
+    .contacto__text .lead { color: rgba(248, 242, 232, 0.7); margin-bottom: 2.5rem; }
+
+    .contacto__channels {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contacto__form-wrap {
+      background: rgba(248, 242, 232, 0.06);
+      border: 1px solid rgba(248, 242, 232, 0.12);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+    }
+
+    .form__group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form__label {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(248, 242, 232, 0.6);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .form__input,
+    .form__textarea {
+      width: 100%;
+      background: rgba(248, 242, 232, 0.07);
+      border: 1px solid rgba(248, 242, 232, 0.15);
+      border-radius: var(--radius);
+      padding: 0.9rem 1.1rem;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--crema);
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    .form__input::placeholder,
+    .form__textarea::placeholder { color: rgba(248, 242, 232, 0.35); }
+    .form__input:focus,
+    .form__textarea:focus {
+      border-color: rgba(196, 144, 74, 0.5);
+      background: rgba(248, 242, 232, 0.1);
+    }
+
+    .form__textarea { height: 120px; resize: vertical; }
+
+    .form__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form__submit {
+      width: 100%;
+      padding: 1rem;
+      background: var(--dorado);
+      color: var(--blanco);
+      border-radius: 100px;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      margin-top: 0.5rem;
+    }
+    .form__submit:hover {
+      background: var(--dorado-claro);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(196, 144, 74, 0.35);
+    }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: var(--negro);
+      color: rgba(248, 242, 232, 0.6);
+      padding: 4rem 0 2rem;
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(248, 242, 232, 0.08);
+    }
+
+    .footer__brand img {
+      height: 48px;
+      margin-bottom: 1.2rem;
+      filter: brightness(0) invert(1) opacity(0.85);
+    }
+
+    .footer__brand p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      max-width: 260px;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(248, 242, 232, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(248, 242, 232, 0.6);
+      transition: var(--transition);
+    }
+    .social-link:hover {
+      border-color: var(--dorado);
+      color: var(--dorado);
+      transform: translateY(-2px);
+    }
+
+    .footer__col h5 {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(248, 242, 232, 0.9);
+      font-weight: 600;
+      margin-bottom: 1.3rem;
+    }
+
+    .footer__col ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer__col ul li a {
+      font-size: 0.85rem;
+      color: rgba(248, 242, 232, 0.55);
+      transition: color 0.3s ease;
+    }
+    .footer__col ul li a:hover { color: var(--dorado-claro); }
+
+    .footer__bottom {
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer__bottom p {
+      font-size: 0.78rem;
+    }
+
+    /* =============================================
+       FLOATING WHATSAPP
+    ============================================= */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: #25D366;
+      color: var(--blanco);
+      padding: 0.8rem 1.4rem 0.8rem 0.8rem;
+      border-radius: 100px;
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+      transition: var(--transition);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .whatsapp-float:hover {
+      background: #1ebe5c;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(37, 211, 102, 0.55);
+    }
+
+    .whatsapp-float__icon {
+      width: 38px;
+      height: 38px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whatsapp-float__pulse {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      width: 14px;
+      height: 14px;
+      background: var(--dorado);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+    }
+
+    /* =============================================
+       SCROLL ANIMATIONS
+    ============================================= */
+    .fade-up { transition: opacity 0.7s ease, transform 0.7s ease; }
+
+    /* =============================================
+       RESPONSIVE — TABLET (≤1024px)
+    ============================================= */
+    @media (max-width: 1024px) {
+      .nav__links { display: none; }
+      .nav__burger { display: flex; }
+
+      .esencia__grid,
+      .masajes__intro,
+      .patagonia__grid,
+      .faq__layout,
+      .ubicacion__grid,
+      .contacto__grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .esencia__image-main { height: 380px; }
+      .esencia__image-accent { display: none; }
+
+      .masajes__image { height: 300px; }
+      .patagonia__image { height: 340px; }
+
+      .galeria__grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 240px;
+      }
+      .galeria__item--tall { grid-row: span 1; }
+      .galeria__item--wide { grid-column: span 2; }
+
+      .alojamiento__grid { grid-template-columns: 1fr 1fr; }
+
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+      .spa__pricing { grid-template-columns: 1fr 1fr; }
+
+      .faq__layout { gap: 2rem; }
+    }
+
+    /* =============================================
+       RESPONSIVE — MOBILE (≤768px)
+    ============================================= */
+    @media (max-width: 768px) {
+      .hero__content { padding-top: 80px; }
+
+      .hero__title { font-size: clamp(2rem, 8vw, 2.8rem); max-width: 100%; }
+      .hero__subtitle { font-size: 0.95rem; max-width: 100%; }
+
+      .hero__actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .hero__actions .btn { width: 100%; justify-content: center; }
+
+      /* Botones: permitir que el texto largo se acomode en vez de cortarse */
+      .btn { white-space: normal; text-align: center; max-width: 100%; }
+      .btn-whatsapp { white-space: normal; max-width: 100%; text-align: center; }
+      .exp-split .btn, .exp-split .btn-whatsapp { width: 100%; justify-content: center; }
+
+      .alojamiento__grid { grid-template-columns: 1fr; }
+
+      .spa__pricing { grid-template-columns: 1fr; }
+
+      .masajes__intro { grid-template-columns: 1fr; gap: 2rem; }
+
+      .esencia__detail { flex-wrap: wrap; gap: 1.5rem; }
+      .esencia__grid { gap: 2rem; }
+
+      .testimonios__grid { grid-template-columns: 1fr; }
+
+      .valores__grid { grid-template-columns: 1fr 1fr; }
+
+      .faq__layout { grid-template-columns: 1fr; }
+
+      .ubicacion__grid { grid-template-columns: 1fr; gap: 2rem; }
+      .ubicacion__map iframe { height: 300px; }
+
+      .contacto__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .contacto__form-wrap { padding: 1.8rem; }
+      .form__row { grid-template-columns: 1fr; }
+
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+      .galeria__grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 180px; }
+      .galeria__item--wide { grid-column: span 2; }
+      .galeria__item--tall { grid-row: span 1; }
+
+      .masajes__promo { flex-direction: column; text-align: center; gap: 1.2rem; }
+      .masajes__promo > .btn { width: 100%; justify-content: center; flex-shrink: 0; }
+
+      .whatsapp-float__text { display: none; }
+      .whatsapp-float { padding: 0.8rem; border-radius: 50%; gap: 0; }
+    }
+
+    /* =============================================
+       RESPONSIVE — SMALL MOBILE (≤480px)
+    ============================================= */
+    @media (max-width: 480px) {
+      .hero__title { font-size: clamp(1.8rem, 9vw, 2.4rem); }
+
+      .galeria__grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+      .galeria__item--wide { grid-column: span 1; }
+
+      .valores__grid { grid-template-columns: 1fr; }
+
+      .footer__grid { grid-template-columns: 1fr; }
+      .footer__bottom { flex-direction: column; text-align: center; gap: 0.5rem; }
+
+      .display-md { font-size: 1.7rem; }
+      .display-lg { font-size: 2rem; }
+
+      .spa__features { grid-template-columns: 1fr 1fr; }
+
+      .aloj-card__image { height: 220px; }
+
+      .esencia__image-main { height: 280px; }
+    }
+
+      .footer__bottom { flex-direction: column; text-align: center; }
+
+      .form__row { grid-template-columns: 1fr; }
+
+      .whatsapp-float__text { display: none; }
+      .whatsapp-float { padding: 0.7rem; border-radius: 50%; }
+      .whatsapp-float__icon { width: 42px; height: 42px; font-size: 1.5rem; }
+
+      .masajes__promo { flex-direction: column; text-align: center; }
+
+      .ubicacion__grid { gap: 2rem; }
+    }
+
+    /* =============================================
+       NUEVO — ACCESOS A EXPERIENCIAS + SPLITS
+    ============================================= */
+    .exp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+    .exp-card {
+      position: relative;
+      height: 300px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .exp-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+    .exp-card__bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      transition: transform 0.6s ease;
+    }
+    .exp-card:hover .exp-card__bg { transform: scale(1.06); }
+    .exp-card__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(14,26,20,0.88) 0%, rgba(14,26,20,0.25) 55%, rgba(14,26,20,0.05) 100%);
+    }
+    .exp-card__label { position: relative; z-index: 2; padding: 1.7rem; }
+    .exp-card__label .exp-card__eyebrow {
+      font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--dorado-claro); font-weight: 500; display: block; margin-bottom: 0.5rem;
+    }
+    .exp-card__label h3 {
+      font-family: var(--font-serif); font-size: 1.55rem; color: var(--crema); line-height: 1.15;
+    }
+    .exp-card__arrow {
+      display: inline-block; margin-top: 0.7rem; color: var(--dorado-claro);
+      font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500;
+    }
+
+    .exp-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem, 6vw, 5.5rem);
+      align-items: center;
+    }
+    .exp-split--reverse .exp-split__media { order: 2; }
+    .exp-split__img {
+      width: 100%; height: 470px; object-fit: cover;
+      border-radius: var(--radius-lg); box-shadow: var(--shadow);
+    }
+    .exp-split__em {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      color: var(--dorado); display: block; margin: 0.8rem 0 1.2rem;
+      line-height: 1.4;
+    }
+    .exp-split--dark .exp-split__em { color: var(--dorado-claro); }
+    .exp-split--dark h2, .exp-split--dark h3 { color: var(--crema); }
+    .exp-split--dark .lead { color: rgba(248,242,232,0.72); }
+
+    .exp-list { display: flex; flex-direction: column; gap: 0.85rem; margin: 1.6rem 0 2rem; }
+    .exp-list li {
+      display: flex; align-items: flex-start; gap: 0.8rem;
+      font-size: 0.95rem; color: var(--texto-suave); line-height: 1.6;
+    }
+    .exp-list li::before {
+      content: ''; width: 8px; height: 8px; margin-top: 0.5rem;
+      border-radius: 50%; background: var(--dorado); flex-shrink: 0;
+    }
+    .exp-split--dark .exp-list li { color: rgba(248,242,232,0.8); }
+
+    /* Reveal on scroll (progressive enhancement) */
+    .js .fade-up { opacity: 0; transform: translateY(26px); }
+    .js .fade-up.in { opacity: 1; transform: none; }
+
+    @media (max-width: 1024px) {
+      .exp-grid { grid-template-columns: 1fr 1fr; }
+      .exp-split { grid-template-columns: 1fr; gap: 2.5rem; }
+      .exp-split--reverse .exp-split__media { order: 0; }
+      .exp-split__img { height: 340px; }
+    }
+    @media (max-width: 600px) {
+      .exp-grid { grid-template-columns: 1fr; }
+      .exp-card { height: auto; min-height: 260px; }
+      .exp-card__label h3 { font-size: 1.35rem; }
+    }
+
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    @media (max-width: 1024px) { .rooms-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 680px) { .rooms-grid { grid-template-columns: 1fr; } }
+
+    /* =============================================
+       CARRUSEL
+    ============================================= */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      height: 470px;
+      background: var(--crema-oscuro);
+    }
+    .carousel__track { position: absolute; inset: 0; }
+    .carousel__slide {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+    .carousel__slide.is-active { opacity: 1; }
+    .carousel__btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(250,255,254,0.9); color: var(--verde-profundo);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; line-height: 1; padding-bottom: 3px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.2);
+      opacity: 0; transition: opacity .3s ease, background .3s ease, color .3s ease;
+      z-index: 3;
+    }
+    .carousel:hover .carousel__btn { opacity: 1; }
+    .carousel__btn:hover { background: var(--dorado); color: #fff; }
+    .carousel__btn--prev { left: 14px; }
+    .carousel__btn--next { right: 14px; }
+    .carousel__dots {
+      position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 8px; z-index: 3;
+    }
+    .carousel__dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(250,255,254,.6); cursor: pointer;
+      border: none; transition: all .3s ease;
+    }
+    .carousel__dot.is-active { background: var(--dorado); width: 22px; border-radius: 5px; }
+    .esencia__image-wrap .carousel { height: 520px; }
+    .aloj-card__image .carousel { height: 100%; border-radius: 0; box-shadow: none; }
+    @media (max-width: 1024px) {
+      .carousel { height: 340px; }
+      .esencia__image-wrap .carousel { height: 380px; }
+      .carousel__btn { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =============================================
+       HEADER / NAVEGACIÓN
+  ============================================= -->
+  <header id="header">
+    <nav class="nav">
+      <a href="#inicio" class="nav__logo">
+        <img src="logo.png" alt="Casa del Sol" />
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="#retiros" class="nav__link">Retiros</a></li>
+        <li><a href="#spa" class="nav__link">Spa</a></li>
+        <li><a href="#piyamadas" class="nav__link">Piyamadas</a></li>
+        <li><a href="#celebraciones" class="nav__link">Celebraciones</a></li>
+        <li><a href="#alojamiento" class="nav__link">Alojamiento</a></li>
+        <li><a href="#contacto" class="nav__cta nav__link">Contacto</a></li>
+      </ul>
+
+      <button class="nav__burger" id="burgerBtn" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="#retiros" class="nav__link">Retiros y residencias</a>
+    <a href="#spa" class="nav__link">Spa</a>
+    <a href="#piyamadas" class="nav__link">Piyamadas</a>
+    <a href="#celebraciones" class="nav__link">Celebraciones</a>
+    <a href="#escapada" class="nav__link">Spa, noche y desayuno</a>
+    <a href="#alojamiento" class="nav__link">Alojamiento</a>
+    <a href="#contacto" class="nav__cta btn btn--primary">Contacto</a>
+  </div>
+
+  <!-- =============================================
+       HERO / INICIO
+  ============================================= -->
+  <section id="inicio">
+    <div id="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__grain"></div>
+
+      <div class="hero__content container container--wide">
+        <div class="hero__tag">
+          <div class="hero__tag-line"></div>
+          <span class="hero__tag-text">Casa del Sol · Puerto Madryn</span>
+        </div>
+
+        <h1 class="hero__title">
+          Un espacio para encontrarse,<br>
+          <em>retirarse</em>, descansar y crear
+        </h1>
+
+        <p class="hero__subtitle">
+          Un espacio de encuentro en un entorno de campo, en Puerto Madryn. Un lugar para bajar el ritmo, compartir, crear, descansar y habitar el tiempo de otra manera.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#retiros" class="btn btn--primary">
+            <span>Conocer los retiros</span>
+            <span>→</span>
+          </a>
+          <a href="#experiencias" class="btn btn--outline">
+            <span>Ver las experiencias</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__scroll">
+        <div class="hero__scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       ESENCIA / IDEA PARAGUAS
+  ============================================= -->
+  <section id="esencia" class="section">
+    <div class="container">
+      <div class="esencia__grid">
+        <div class="esencia__image-wrap fade-up">
+          <div class="carousel" data-autoplay="6000">
+            <div class="carousel__track">
+              <img class="carousel__slide is-active" src="fotos/esencia-0.jpg" alt="Casa del Sol — 1">
+              <img class="carousel__slide" src="fotos/esencia-2.jpg" alt="Casa del Sol — 2" loading="lazy">
+              <img class="carousel__slide" src="fotos/esencia-3.jpg" alt="Casa del Sol — 3" loading="lazy">
+              <img class="carousel__slide" src="fotos/esencia-4.jpg" alt="Casa del Sol — 4" loading="lazy">
+              <img class="carousel__slide" src="fotos/esencia-5.jpg" alt="Casa del Sol — 5" loading="lazy">
+            </div>
+            <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+            <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+            <div class="carousel__dots"></div>
+          </div>
+          <div class="esencia__badges">
+            <span class="badge">Retirado</span>
+            <span class="badge">Rústico</span>
+            <span class="badge">Natural</span>
+            <span class="badge"><span class="badge--icon">6km</span> del centro</span>
+          </div>
+        </div>
+
+        <div class="esencia__text fade-up">
+          <span class="eyebrow">La casa</span>
+          <h2 class="display-lg">Un lugar para habitar el tiempo de otra manera</h2>
+          <p class="lead">
+            Casa del Sol es un espacio de encuentro en un entorno de campo, en Puerto Madryn. Un lugar para bajar el ritmo, compartir, crear, descansar y habitar el tiempo de otra manera.
+          </p>
+          <p class="lead">
+            Recibimos retiros, residencias, encuentros y experiencias grupales, y ofrecemos distintas maneras de habitar la casa: spa exclusivo, piyamadas, celebraciones, alojamiento y experiencias de descanso.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       ACCESOS A EXPERIENCIAS
+  ============================================= -->
+  <section id="experiencias" class="section section--warm">
+    <div class="container container--wide">
+      <div class="section-header section-header--center fade-up">
+        <span class="eyebrow">Experiencias</span>
+        <h2 class="display-md">Distintas maneras de habitar Casa del Sol</h2>
+        <div class="gold-line" style="margin:1.2rem auto 0;"></div>
+      </div>
+
+      <div class="exp-grid fade-up">
+        <a href="#retiros" class="exp-card">
+          <div class="exp-card__bg" style="background-image:url('deck.jpg');"></div>
+          <div class="exp-card__overlay"></div>
+          <div class="exp-card__label">
+            <span class="exp-card__eyebrow">Retiros y residencias</span>
+            <h3>Retirarse, encontrarse y crear</h3>
+            <span class="exp-card__arrow">Ver más →</span>
+          </div>
+        </a>
+        <a href="#spa" class="exp-card">
+          <div class="exp-card__bg" style="background-image:url('spa.jpg');"></div>
+          <div class="exp-card__overlay"></div>
+          <div class="exp-card__label">
+            <span class="exp-card__eyebrow">Spa exclusivo</span>
+            <h3>Un spa solo para vos y tu grupo</h3>
+            <span class="exp-card__arrow">Ver más →</span>
+          </div>
+        </a>
+        <a href="#piyamadas" class="exp-card">
+          <div class="exp-card__bg" style="background-image:url('instalaciones.jpg');"></div>
+          <div class="exp-card__overlay"></div>
+          <div class="exp-card__label">
+            <span class="exp-card__eyebrow">Piyamadas</span>
+            <h3>Una noche para quedarse</h3>
+            <span class="exp-card__arrow">Ver más →</span>
+          </div>
+        </a>
+        <a href="#celebraciones" class="exp-card">
+          <div class="exp-card__bg" style="background-image:url('patio.jpg');"></div>
+          <div class="exp-card__overlay"></div>
+          <div class="exp-card__label">
+            <span class="exp-card__eyebrow">Celebraciones y reuniones</span>
+            <h3>Encontrarse también puede ser la celebración</h3>
+            <span class="exp-card__arrow">Ver más →</span>
+          </div>
+        </a>
+        <a href="#escapada" class="exp-card">
+          <div class="exp-card__bg" style="background-image:url('cabanas.jpg');"></div>
+          <div class="exp-card__overlay"></div>
+          <div class="exp-card__label">
+            <span class="exp-card__eyebrow">Spa, noche y desayuno</span>
+            <h3>Una noche para sentir que te fuiste lejos</h3>
+            <span class="exp-card__arrow">Ver más →</span>
+          </div>
+        </a>
+        <a href="#alojamiento" class="exp-card">
+          <div class="exp-card__bg" style="background-image:url('deck.jpg');"></div>
+          <div class="exp-card__overlay"></div>
+          <div class="exp-card__label">
+            <span class="exp-card__eyebrow">Alojamiento</span>
+            <h3>Quedarse en el campo</h3>
+            <span class="exp-card__arrow">Ver más →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       RETIROS Y RESIDENCIAS
+  ============================================= -->
+  <section id="retiros" class="section section--cream">
+    <div class="container">
+      <div class="exp-split">
+        <div class="exp-split__media fade-up">
+          <div class="carousel" data-autoplay="5000">
+            <div class="carousel__track">
+              <img class="carousel__slide is-active" src="fotos/retiros-0.jpg" alt="Retiros y residencias — 1">
+              <img class="carousel__slide" src="fotos/retiros-1.jpg" alt="Retiros y residencias — 2" loading="lazy">
+              <img class="carousel__slide" src="fotos/retiros-2.jpg" alt="Retiros y residencias — 3" loading="lazy">
+              <img class="carousel__slide" src="fotos/retiros-3.jpg" alt="Retiros y residencias — 4" loading="lazy">
+              <img class="carousel__slide" src="fotos/retiros-4.jpg" alt="Retiros y residencias — 5" loading="lazy">
+            </div>
+            <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+            <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+            <div class="carousel__dots"></div>
+          </div>
+        </div>
+        <div class="fade-up">
+          <span class="eyebrow">Retiros y residencias</span>
+          <h2 class="display-md">Un lugar para retirarse, encontrarse y crear</h2>
+          <span class="exp-split__em">Tiempo, intimidad y un espacio propio.</span>
+          <p class="lead">
+            Casa del Sol recibe retiros, residencias artísticas, encuentros formativos y propuestas grupales que necesiten tiempo, intimidad y un espacio propio. Contamos con alojamiento, espacios interiores y exteriores, cocina, spa y diferentes sectores que pueden adaptarse a las necesidades de cada experiencia.
+          </p>
+          <p class="lead" style="margin-top:1rem;">
+            Podemos recibir propuestas ya organizadas o trabajar en conjunto para diseñar la estadía y los servicios necesarios para cada grupo. Queremos que sea un lugar donde por unos días sea posible correrse del ritmo cotidiano para encontrarse, investigar, crear, descansar o compartir un proceso.
+          </p>
+          <div style="margin-top:2rem;">
+            <a href="https://wa.me/5492804655133?text=Hola!%20Quiero%20organizar%20un%20retiro%20o%20residencia%20en%20Casa%20del%20Sol" class="btn btn--primary" target="_blank" rel="noopener">
+              Quiero organizar un retiro o residencia →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SPA & BIENESTAR
+  ============================================= -->
+  <section id="spa">
+    <div class="spa__bg"></div>
+    <div class="spa__overlay"></div>
+
+    <div class="spa__content container" style="padding-top:clamp(4rem,8vw,9rem);padding-bottom:clamp(4rem,8vw,9rem);">
+
+      <div class="spa__header section-header fade-up">
+        <span class="eyebrow" style="color:var(--dorado-claro);">Spa & Bienestar</span>
+        <h2 class="display-lg" style="color:var(--crema);max-width:700px;">
+          Un spa solo para vos<br>y tu grupo
+        </h2>
+        <p class="lead" style="color:rgba(248,242,232,0.72);max-width:620px;margin-top:1rem;">
+          Los turnos de spa son exclusivos: durante el tiempo de la reserva, el espacio no se comparte con otras personas. Podés venir sola, en pareja o en grupo, en un entorno retirado y natural.
+        </p>
+      </div>
+
+      <!-- Instalaciones / circuito -->
+      <div class="spa__features fade-up">
+        <div class="spa__feature">
+          <div class="spa__feature-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 12c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"/><path d="M2 17c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"/><path d="M10 11V7a2 2 0 0 1 4 0v1"/></svg></div>
+          <h4>Piscina climatizada</h4>
+          <p>Temperatura perfecta durante todo el año para que el frío patagónico no sea un impedimento.</p>
+        </div>
+        <div class="spa__feature">
+          <div class="spa__feature-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></div>
+          <h4>Sauna seco</h4>
+          <p>El calor del sauna relaja profundamente la musculatura y activa la circulación.</p>
+        </div>
+        <div class="spa__feature">
+          <div class="spa__feature-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="8" width="18" height="10" rx="2"/><circle cx="8" cy="13" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="13" r="1" fill="currentColor" stroke="none"/><path d="M8 8V6M12 8V5M16 8V6"/></svg></div>
+          <h4>Jacuzzi</h4>
+          <p>Hidromasaje de cuerpo completo para disolver la tensión acumulada del día a día.</p>
+        </div>
+        <div class="spa__feature">
+          <div class="spa__feature-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4 Q4 2 7 2 L16 2 Q20 2 20 7"/><path d="M4 4 L4 12"/><circle cx="4" cy="13" r="1" fill="currentColor" stroke="none"/><path d="M8 16v2M12 16v2M16 16v2M10 19v1M14 19v1"/><path d="M2 15h20"/></svg></div>
+          <h4>Ducha escocesa</h4>
+          <p>Contraste de temperaturas que estimula el sistema circulatorio y revitaliza la energía.</p>
+        </div>
+        <div class="spa__feature">
+          <div class="spa__feature-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 20v-6a8 8 0 0 1 16 0v6"/><path d="M2 20h20"/><path d="M12 4V2"/></svg></div>
+          <h4>Espacio de descanso</h4>
+          <p>Un sector para bajar el ritmo entre una instalación y otra, sin apuro.</p>
+        </div>
+        <div class="spa__feature">
+          <div class="spa__feature-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3L5 7v14h14V7l-4-4"/><path d="M9 3l3 5 3-5"/><path d="M12 8v8"/></svg></div>
+          <h4>Toallas & batas</h4>
+          <p>Todo incluido. Solo traé las ganas de desconectar. Nosotros ponemos el resto.</p>
+        </div>
+      </div>
+
+      <!-- Experiencias del spa -->
+      <div class="exp-split exp-split--dark fade-up" style="margin-top:1rem;">
+        <div>
+          <h3 class="display-sm" style="color:var(--crema);">Elegí tu experiencia</h3>
+          <span class="exp-split__em">Una pausa en medio de la rutina, en un entorno retirado y natural.</span>
+          <ul class="exp-list">
+            <li>Turnos exclusivos de spa</li>
+            <li>Experiencias combinadas</li>
+            <li>Masajes</li>
+          </ul>
+          <a href="https://wa.me/5492804655133?text=Hola!%20Quiero%20consultar%20experiencias%20y%20disponibilidad%20de%20spa%20en%20Casa%20del%20Sol" class="btn-whatsapp" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            <span>Consultar experiencias y disponibilidad</span>
+          </a>
+        </div>
+        <div class="exp-split__media">
+          <div class="carousel" data-autoplay="5000">
+            <div class="carousel__track">
+              <img class="carousel__slide is-active" src="fotos/spa-1.jpg" alt="Spa exclusivo — 1">
+              <img class="carousel__slide" src="fotos/spa-4.jpg" alt="Spa exclusivo — 2" loading="lazy">
+              <img class="carousel__slide" src="fotos/spa-9.jpg" alt="Spa exclusivo — 3" loading="lazy">
+            </div>
+            <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+            <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+            <div class="carousel__dots"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       PIYAMADAS
+  ============================================= -->
+  <section id="piyamadas" class="section section--cream">
+    <div class="container">
+      <div class="exp-split exp-split--reverse">
+        <div class="exp-split__media fade-up">
+          <div class="carousel" data-autoplay="5000">
+            <div class="carousel__track">
+              <img class="carousel__slide is-active" src="fotos/piyamadas-0.jpg" alt="Piyamada — 1">
+              <img class="carousel__slide" src="fotos/piyamadas-2.jpg" alt="Piyamada — 2" loading="lazy">
+            </div>
+            <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+            <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+            <div class="carousel__dots"></div>
+          </div>
+        </div>
+        <div class="fade-up">
+          <span class="eyebrow">Piyamadas</span>
+          <h2 class="display-md">Una noche para quedarse</h2>
+          <span class="exp-split__em">Spa, encuentro, alojamiento y desayuno en una experiencia pensada para compartir.</span>
+          <p class="lead">
+            Las piyamadas combinan un turno exclusivo de spa con una noche en Casa del Sol y desayuno al día siguiente. Una propuesta para cumpleaños, encuentros entre amigas, celebraciones o simplemente para regalarse una noche diferente sin salir de Puerto Madryn.
+          </p>
+          <div style="margin-top:2rem;">
+            <a href="https://wa.me/5492804655133?text=Hola!%20Quiero%20organizar%20una%20piyamada%20en%20Casa%20del%20Sol" class="btn btn--outline-dark" target="_blank" rel="noopener">
+              Quiero organizar una piyamada →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CELEBRACIONES Y REUNIONES
+  ============================================= -->
+  <section id="celebraciones" class="section section--warm">
+    <div class="container">
+      <div class="exp-split">
+        <div class="exp-split__media fade-up">
+          <div class="carousel" data-autoplay="5000">
+            <div class="carousel__track">
+              <img class="carousel__slide is-active" src="fotos/celebraciones-1.jpg" alt="Celebraciones y reuniones — 1">
+              <img class="carousel__slide" src="fotos/celebraciones-2.jpg" alt="Celebraciones y reuniones — 2" loading="lazy">
+            </div>
+            <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+            <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+            <div class="carousel__dots"></div>
+          </div>
+        </div>
+        <div class="fade-up">
+          <span class="eyebrow">Celebraciones y reuniones</span>
+          <h2 class="display-md">Encontrarse también puede ser la celebración</h2>
+          <span class="exp-split__em">Una alternativa íntima, lejos del formato tradicional de salón.</span>
+          <p class="lead">
+            Cumpleaños, aniversarios, despedidas, reuniones y encuentros especiales pueden tener otra forma. Casa del Sol puede reservarse para experiencias grupales que combinan encuentro, naturaleza y spa exclusivo.
+          </p>
+          <p class="lead" style="margin-top:1rem;">
+            Podemos adaptar la propuesta según el tipo de encuentro y la cantidad de personas.
+          </p>
+          <div style="margin-top:2rem;">
+            <a href="https://wa.me/5492804655133?text=Hola!%20Quiero%20organizar%20un%20evento%20en%20Casa%20del%20Sol" class="btn btn--outline-dark" target="_blank" rel="noopener">
+              Quiero organizar un evento →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SPA, NOCHE Y DESAYUNO
+  ============================================= -->
+  <section id="escapada" class="section section--cream">
+    <div class="container">
+      <div class="exp-split exp-split--reverse">
+        <div class="exp-split__media fade-up">
+          <img src="cabanas.jpg" alt="Escapada de spa, noche y desayuno en Casa del Sol" class="exp-split__img" />
+        </div>
+        <div class="fade-up">
+          <span class="eyebrow">Spa, noche y desayuno</span>
+          <h2 class="display-md">A veces una noche alcanza para sentir que te fuiste lejos</h2>
+          <span class="exp-split__em">Renovar la pareja y hacer algo diferente de a dos.</span>
+          <p class="lead">
+            Una experiencia para renovar la pareja, cortar con la rutina sin necesidad de viajar y hacer algo diferente de a dos. Combina alojamiento en Casa del Sol, un turno exclusivo de spa y desayuno al día siguiente.
+          </p>
+          <p class="lead" style="margin-top:1rem;">
+            Llegar, bajar el ritmo, meterse al agua, dormir y despertarse en el campo.
+          </p>
+          <div style="margin-top:2rem;">
+            <a href="https://wa.me/5492804655133?text=Hola!%20Quiero%20consultar%20disponibilidad%20de%20Spa%2C%20noche%20y%20desayuno%20en%20Casa%20del%20Sol" class="btn btn--outline-dark" target="_blank" rel="noopener">
+              Consultar disponibilidad →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       ALOJAMIENTO
+  ============================================= -->
+  <section id="alojamiento" class="section section--warm">
+    <div class="container">
+      <div class="section-header section-header--center fade-up">
+        <span class="eyebrow">Hospedaje de campo</span>
+        <h2 class="display-md">Dormir en Casa del Sol</h2>
+        <p class="lead" style="max-width:640px;margin:1rem auto 0;">
+          Estamos en Quintas del Mirador, en un entorno de campo a pocos minutos de Puerto Madryn. El alojamiento es sencillo, cálido y con la impronta de Casa del Sol: retirado, rústico y natural.
+        </p>
+        <div class="gold-line" style="margin:1.5rem auto 0;"></div>
+      </div>
+
+      <div class="rooms-grid">
+
+        <!-- La Miradora -->
+        <div class="aloj-card fade-up">
+          <div class="aloj-card__image">
+            <div class="carousel" data-autoplay="4500">
+              <div class="carousel__track">
+                <img class="carousel__slide is-active" src="fotos/miradora-0.jpg" alt="La Miradora — 1">
+                <img class="carousel__slide" src="fotos/miradora-1.jpg" alt="La Miradora — 2" loading="lazy">
+                <img class="carousel__slide" src="fotos/miradora-2.jpg" alt="La Miradora — 3" loading="lazy">
+                <img class="carousel__slide" src="fotos/miradora-3.jpg" alt="La Miradora — 4" loading="lazy">
+                <img class="carousel__slide" src="fotos/miradora-4.jpg" alt="La Miradora — 5" loading="lazy">
+                <img class="carousel__slide" src="fotos/miradora-5.jpg" alt="La Miradora — 6" loading="lazy">
+                <img class="carousel__slide" src="fotos/miradora-6.jpg" alt="La Miradora — 7" loading="lazy">
+              </div>
+              <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+              <div class="carousel__dots"></div>
+            </div>
+          </div>
+          <div class="aloj-card__body">
+            <span class="aloj-card__tag">Departamento independiente</span>
+            <h3>La Miradora</h3>
+            <p class="aloj-card__desc">
+              Departamento independiente en planta alta, con balcón y vistas abiertas.
+            </p>
+            <ul class="aloj-card__amenities">
+              <li class="amenity">Cama doble y cucheta</li>
+              <li class="amenity">Kitchenette</li>
+              <li class="amenity">Baño con bañera</li>
+              <li class="amenity">Calefacción</li>
+              <li class="amenity">WiFi</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Suite Grupal -->
+        <div class="aloj-card fade-up">
+          <div class="aloj-card__image">
+            <div class="carousel" data-autoplay="4500">
+              <div class="carousel__track">
+                <img class="carousel__slide is-active" src="fotos/suite-0.jpg" alt="Suite Grupal — 1">
+                <img class="carousel__slide" src="fotos/suite-1.jpg" alt="Suite Grupal — 2" loading="lazy">
+              </div>
+              <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+              <div class="carousel__dots"></div>
+            </div>
+          </div>
+          <div class="aloj-card__body">
+            <span class="aloj-card__tag">Para grupos</span>
+            <h3>Suite Grupal</h3>
+            <p class="aloj-card__desc">
+              Pensada especialmente para grupos, con acceso a cocina compartida.
+            </p>
+            <ul class="aloj-card__amenities">
+              <li class="amenity">6 plazas en cuchetas</li>
+              <li class="amenity">Hidromasaje</li>
+              <li class="amenity">Aire frío/calor</li>
+              <li class="amenity">Smart TV</li>
+              <li class="amenity">WiFi</li>
+              <li class="amenity">Cocina compartida</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Standard -->
+        <div class="aloj-card fade-up">
+          <div class="aloj-card__image">
+            <div class="carousel" data-autoplay="4500">
+              <div class="carousel__track">
+                <img class="carousel__slide is-active" src="fotos/standard-0.jpg" alt="Standard — 1">
+                <img class="carousel__slide" src="fotos/standard-2.jpg" alt="Standard — 2" loading="lazy">
+              </div>
+              <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+              <div class="carousel__dots"></div>
+            </div>
+          </div>
+          <div class="aloj-card__body">
+            <span class="aloj-card__tag">Habitación</span>
+            <h3>Standard</h3>
+            <p class="aloj-card__desc">
+              Habitación con cama doble y cama individual, con acceso a cocina compartida.
+            </p>
+            <ul class="aloj-card__amenities">
+              <li class="amenity">Baño con ducha</li>
+              <li class="amenity">Aire frío/calor</li>
+              <li class="amenity">TV</li>
+              <li class="amenity">WiFi</li>
+              <li class="amenity">Cocina compartida</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="fade-up" style="text-align:center;margin-top:2.5rem;">
+        <a href="https://wa.me/5492804655133?text=Hola!%20Quiero%20consultar%20alojamiento%20en%20Casa%20del%20Sol" class="btn btn--primary" target="_blank" rel="noopener">
+          Consultar alojamiento →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       PASAR EL DÍA (solo verano)
+  ============================================= -->
+  <section id="pasar-el-dia" class="section section--cream">
+    <div class="container">
+      <div class="exp-split">
+        <div class="exp-split__media fade-up">
+          <div class="carousel" data-autoplay="5000">
+            <div class="carousel__track">
+              <img class="carousel__slide is-active" src="fotos/pasarday-0.jpg" alt="Un día de campo — 1">
+              <img class="carousel__slide" src="fotos/pasarday-1.jpg" alt="Un día de campo — 2" loading="lazy">
+            </div>
+            <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+            <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+            <div class="carousel__dots"></div>
+          </div>
+        </div>
+        <div class="fade-up">
+          <span class="eyebrow">Pasar el día · solo verano</span>
+          <h2 class="display-md">Un día de campo sin irte lejos</h2>
+          <span class="exp-split__em">Disponible únicamente durante el verano.</span>
+          <p class="lead">
+            Durante el verano también podés venir a pasar el día en Casa del Sol. Pileta exterior, patio y chulengo para disfrutar unas horas al aire libre, descansar, comer algo y encontrarse.
+          </p>
+          <p class="lead" style="margin-top:1rem;">
+            Esta experiencia corresponde al sector exterior y no incluye el circuito de spa.
+          </p>
+          <div style="margin-top:2rem;">
+            <a href="https://wa.me/5492804655133?text=Hola!%20Quiero%20consultar%20disponibilidad%20para%20pasar%20el%20d%C3%ADa%20en%20Casa%20del%20Sol" class="btn btn--outline-dark" target="_blank" rel="noopener">
+              Consultar disponibilidad →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       GALERÍA
+  ============================================= -->
+  <section id="galeria" class="section section--cream">
+    <div class="container container--wide">
+      <div class="section-header section-header--center fade-up">
+        <span class="eyebrow">Galería</span>
+        <h2 class="display-md">Una imagen vale más<br>que mil palabras</h2>
+        <div class="gold-line" style="margin:1.2rem auto 0;"></div>
+      </div>
+
+      <div class="galeria__grid fade-up">
+        <div class="galeria__item galeria__item--tall">
+          <img src="spa.jpg" alt="Spa Casa del Sol" loading="lazy" />
+          <div class="galeria__item-overlay"></div>
+        </div>
+        <div class="galeria__item">
+          <img src="cabanas.jpg" alt="Cabañas Casa del Sol" loading="lazy" />
+          <div class="galeria__item-overlay"></div>
+        </div>
+        <div class="galeria__item">
+          <img src="instalaciones.jpg" alt="Instalaciones Casa del Sol" loading="lazy" />
+          <div class="galeria__item-overlay"></div>
+        </div>
+        <div class="galeria__item galeria__item--wide">
+          <img src="deck.jpg" alt="Deck y jardín Casa del Sol" loading="lazy" />
+          <div class="galeria__item-overlay"></div>
+        </div>
+        <div class="galeria__item">
+          <img src="patio.jpg" alt="Patio jardín Casa del Sol" loading="lazy" />
+          <div class="galeria__item-overlay"></div>
+        </div>
+        <div class="galeria__item">
+          <img src="instalaciones.jpg" alt="Casa del Sol Puerto Madryn" loading="lazy" />
+          <div class="galeria__item-overlay"></div>
+        </div>
+      </div>
+
+      <div class="fade-up" style="text-align:center;margin-top:2.5rem;">
+        <a href="https://www.instagram.com/casadelsol_spa/" target="_blank" rel="noopener" class="btn btn--ghost">
+          Ver más en Instagram — @casadelsol_spa →
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       VALORES
+  ============================================= -->
+  <section id="valores" class="section--dark" style="padding:clamp(3rem,5vw,5.5rem) 0;">
+    <div class="container">
+      <div class="valores__grid">
+        <div class="valor-item fade-up">
+          <div class="valor-item__icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="7" cy="5" r="2"/><circle cx="17" cy="5" r="2"/><circle cx="4" cy="11" r="2"/><circle cx="20" cy="11" r="2"/><path d="M12 22c-3 0-5-2-6-4s0-5 2-6c1-1 2-1 4-1s3 0 4 1c2 1 3 4 2 6s-3 4-6 4z"/></svg></div>
+          <h4>Pet Friendly</h4>
+          <p>Tus mascotas son bienvenidas en Casa del Sol. Sabemos lo importante que son, y nos aseguramos de que también disfruten del espacio.</p>
+        </div>
+        <div class="valor-item fade-up">
+          <div class="valor-item__icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 17a10 10 0 0 0-20 0"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M10 17a2 2 0 0 1 4 0"/></svg></div>
+          <h4>Espacio inclusivo</h4>
+          <p>Casa del Sol es un espacio abierto y respetuoso para todas las personas, identidades y formas de amor.</p>
+        </div>
+        <div class="valor-item fade-up">
+          <div class="valor-item__icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+          <h4>Naturaleza & calma</h4>
+          <p>Rodeados de jardines con frutales y plantas nativas, diseñamos cada rincón para que la naturaleza sea parte de tu descanso.</p>
+        </div>
+        <div class="valor-item fade-up">
+          <div class="valor-item__icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg></div>
+          <h4>Exclusividad</h4>
+          <p>Los turnos de spa son solo tuyos. Cada experiencia está reservada exclusivamente para vos y las personas que elegís traer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FAQ
+  ============================================= -->
+  <section id="faq" class="section section--cream">
+    <div class="container">
+      <div class="faq__layout">
+
+        <div class="faq__sidebar fade-up">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="display-md">Preguntas frecuentes</h2>
+          <p class="lead">¿Algo que quieras saber antes de escribirnos? Acá respondemos las preguntas más comunes.</p>
+          <div style="margin-top:2rem;">
+            <a href="https://wa.me/5492804655133?text=Hola!%20Tengo%20una%20consulta%20sobre%20Casa%20del%20Sol" class="btn-whatsapp" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              <span>Consultarnos por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="faq__list fade-up">
+          <div class="faq-item">
+            <button class="faq-item__question">
+              ¿Qué tipo de retiros y encuentros pueden hacerse?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Recibimos retiros, residencias artísticas, encuentros formativos y propuestas grupales que necesiten tiempo, intimidad y un espacio propio. Podés traer una propuesta ya organizada o podemos diseñar juntos la estadía y los servicios necesarios para tu grupo.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question">
+              ¿Cómo funciona el turno exclusivo de spa?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Cuando reservás un turno, el spa queda reservado únicamente para vos y las personas que invitás. No hay otros grupos usando las instalaciones al mismo tiempo, lo que garantiza privacidad total y una experiencia completamente personalizada.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question">
+              ¿Qué incluye el circuito de spa?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>El circuito cuenta con piscina climatizada, jacuzzi, sauna seco, ducha escocesa y espacio de descanso. También se proveen toallas y batas. Podés elegir entre turnos exclusivos, experiencias combinadas o sumar masajes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question">
+              ¿Cómo consulto disponibilidad y valores?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>La forma más rápida es por WhatsApp al +549 (280) 4655133. También podés completar el formulario de contacto en esta página o escribirnos por Instagram (@casadelsol_spa) o Facebook. Te contamos la disponibilidad y armamos juntos la propuesta según lo que necesites.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question">
+              ¿Aceptan mascotas?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Sí, somos Pet Friendly. Las mascotas son bienvenidas siempre que se mantengan tranquilas para garantizar una convivencia armoniosa con los demás huéspedes y visitantes. Consultar condiciones específicas al reservar.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question">
+              ¿Cómo llego desde el centro de Puerto Madryn?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Estamos a 6 km del centro de Puerto Madryn, en el barrio Quintas del Mirador (Las Araucarias Nº 3976). El traslado en auto demora aproximadamente 10-12 minutos. También podés llegar en remis/taxi. Tenemos estacionamiento disponible.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       UBICACIÓN
+  ============================================= -->
+  <section id="ubicacion" class="section section--warm">
+    <div class="container">
+      <div class="section-header section-header--center fade-up">
+        <span class="eyebrow">Cómo llegar</span>
+        <h2 class="display-md">Encontranos en el corazón<br>del barrio de quintas</h2>
+        <div class="gold-line" style="margin:1.2rem auto 0;"></div>
+      </div>
+
+      <div class="ubicacion__grid fade-up">
+        <div class="ubicacion__info">
+          <h3>Información de acceso</h3>
+
+          <div class="info-block">
+            <div class="info-block__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s-8-5.5-8-12a8 8 0 0 1 16 0c0 6.5-8 12-8 12z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="info-block__text">
+              <span class="label">Dirección</span>
+              <span class="value">Las Araucarias Nº 3976<br>Quintas del Mirador<br>9120 Puerto Madryn, Chubut</span>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-block__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div class="info-block__text">
+              <span class="label">Teléfono / WhatsApp</span>
+              <span class="value"><a href="tel:+5492804655133" style="color:var(--verde-profundo);">+549 (280) 4655133</a></span>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-block__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></div>
+            <div class="info-block__text">
+              <span class="label">Email</span>
+              <span class="value"><a href="mailto:hospedajedecampocasadelsol@gmail.com" style="color:var(--verde-profundo);">hospedajedecampocasadelsol@gmail.com</a></span>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-block__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14l2 5v3a2 2 0 0 1-2 2h-1"/><path d="M5 7l2-4h8l2 4"/><circle cx="7.5" cy="17" r="2.5"/><circle cx="17.5" cy="17" r="2.5"/></svg></div>
+            <div class="info-block__text">
+              <span class="label">Cómo llegar</span>
+              <span class="value">6 km del centro de Puerto Madryn<br>~10 min en auto · Estacionamiento propio</span>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem;">
+            <a href="https://wa.me/5492804655133" target="_blank" rel="noopener" class="btn-whatsapp">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              <span>Escribirnos por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="ubicacion__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5853.896445533984!2d-65.0415192681005!3d-42.810580192709374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbe03cadc338ef771%3A0xb5e22cf75289a21e!2sCasa%20del%20Sol!5e0!3m2!1ses-419!2sar!4v1674821287503!5m2!1ses-419!2sar"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa Casa del Sol Puerto Madryn"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       RESERVAR / CONTACTO
+  ============================================= -->
+  <section id="contacto">
+    <div class="contacto__grid container" style="padding-top:clamp(4rem,8vw,9rem);padding-bottom:clamp(4rem,8vw,9rem);grid-template-columns:1fr;max-width:760px;text-align:center;">
+
+      <div class="contacto__text fade-up" style="display:flex;flex-direction:column;align-items:center;">
+        <span class="eyebrow" style="color:var(--dorado-claro);">Reservas & Consultas</span>
+        <h2 class="display-lg">¿Listo para<br>desconectar?</h2>
+        <p class="lead">
+          Escribinos y te confirmamos disponibilidad en menos de 24 horas. También podés enviarnos un WhatsApp para una respuesta más inmediata.
+        </p>
+
+        <div class="contacto__channels">
+          <a href="https://wa.me/5492804655133?text=Hola!%20Quiero%20hacer%20una%20consulta%20en%20Casa%20del%20Sol" class="btn-whatsapp" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            <span>Escribir por WhatsApp — respuesta inmediata</span>
+          </a>
+
+          <div style="display:flex;gap:1rem;margin-top:0.5rem;flex-wrap:wrap;">
+            <a href="https://www.instagram.com/casadelsol_spa/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size:0.78rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram
+            </a>
+            <a href="https://www.facebook.com/HospedajeCasadelSol/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size:0.78rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer>
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <img src="logo.png" alt="Casa del Sol" style="height:72px;width:auto;margin-bottom:1rem;filter:brightness(0) invert(1) opacity(0.9);" />
+          <p>Un espacio de encuentro, retiro, descanso y creación, en un entorno de campo en Puerto Madryn.</p>
+          <div class="footer__social" style="margin-top:1.2rem;">
+            <a href="https://www.instagram.com/casadelsol_spa/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/HospedajeCasadelSol/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://wa.me/5492804655133" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h5>Experiencias</h5>
+          <ul>
+            <li><a href="#retiros">Retiros y residencias</a></li>
+            <li><a href="#spa">Spa exclusivo</a></li>
+            <li><a href="#piyamadas">Piyamadas</a></li>
+            <li><a href="#celebraciones">Celebraciones</a></li>
+            <li><a href="#escapada">Spa, noche y desayuno</a></li>
+            <li><a href="#pasar-el-dia">Pasar el día</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h5>Explorar</h5>
+          <ul>
+            <li><a href="#esencia">La casa</a></li>
+            <li><a href="#alojamiento">Alojamiento</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="tel:+5492804655133">+549 (280) 4655133</a></li>
+            <li><a href="mailto:hospedajedecampocasadelsol@gmail.com">Enviar email</a></li>
+            <li><a href="https://wa.me/5492804655133" target="_blank">WhatsApp</a></li>
+            <li><a href="#ubicacion">Cómo llegar</a></li>
+          </ul>
+          <p style="font-size:0.8rem;margin-top:1.2rem;line-height:1.6;">Las Araucarias Nº 3976<br>Quintas del Mirador<br>Puerto Madryn, Chubut</p>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2025 Casa del Sol · Todos los derechos reservados</p>
+        <p>Un espacio para encontrarse, retirarse, descansar y crear</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================================
+       FLOATING WHATSAPP
+  ============================================= -->
+  <a
+    href="https://wa.me/5492804655133?text=Hola!%20Quiero%20hacer%20una%20consulta%20sobre%20Casa%20del%20Sol"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+  >
+    <div class="whatsapp-float__pulse"></div>
+    <div class="whatsapp-float__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></div>
+    <span class="whatsapp-float__text">Escribir por WhatsApp</span>
+  </a>
+
+  <!-- =============================================
+       JAVASCRIPT
+  ============================================= -->
+  <script>
+    document.documentElement.classList.add('js');
+
+    // --- Header scroll behavior ---
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // --- Mobile menu ---
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burgerBtn.addEventListener('click', () => {
+      burgerBtn.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        burgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // --- FAQ accordion ---
+    document.querySelectorAll('.faq-item__question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+
+    // --- Carruseles ---
+    document.querySelectorAll('.carousel').forEach(car => {
+      const slides = Array.from(car.querySelectorAll('.carousel__slide'));
+      if (!slides.length) return;
+      const dotsWrap = car.querySelector('.carousel__dots');
+      let i = slides.findIndex(s => s.classList.contains('is-active'));
+      if (i < 0) { i = 0; slides[0].classList.add('is-active'); }
+      const dots = slides.map((_, idx) => {
+        const d = document.createElement('button');
+        d.className = 'carousel__dot' + (idx === i ? ' is-active' : '');
+        d.setAttribute('aria-label', 'Ir a la imagen ' + (idx + 1));
+        d.addEventListener('click', () => { go(idx); reset(); });
+        dotsWrap && dotsWrap.appendChild(d);
+        return d;
+      });
+      function go(n) {
+        slides[i].classList.remove('is-active');
+        if (dots[i]) dots[i].classList.remove('is-active');
+        i = (n + slides.length) % slides.length;
+        slides[i].classList.add('is-active');
+        if (dots[i]) dots[i].classList.add('is-active');
+      }
+      const prev = car.querySelector('.carousel__btn--prev');
+      const next = car.querySelector('.carousel__btn--next');
+      prev && prev.addEventListener('click', () => { go(i - 1); reset(); });
+      next && next.addEventListener('click', () => { go(i + 1); reset(); });
+      let t = null;
+      const ms = parseInt(car.dataset.autoplay || '0', 10);
+      function play() { if (ms > 0) t = setInterval(() => go(i + 1), ms); }
+      function reset() { if (t) { clearInterval(t); play(); } }
+      car.addEventListener('mouseenter', () => { if (t) { clearInterval(t); t = null; } });
+      car.addEventListener('mouseleave', () => { if (ms > 0 && !t) play(); });
+      if (slides.length > 1) { play(); }
+      else { car.querySelectorAll('.carousel__btn, .carousel__dots').forEach(e => e.style.display = 'none'); }
+    });
+
+    // --- Reveal on scroll ---
+    const revealEls = document.querySelectorAll('.fade-up');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('in'));
+    }
+  </script>
+
+</body>
+</html>
